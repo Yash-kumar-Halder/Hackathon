@@ -1,0 +1,96 @@
+.banner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* overflow: hidden; */
+    position: relative;
+    z-index: 9;
+    rotate: -10deg;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 160px;
+    height: 85px;
+    top: 40%;
+    /* left: calc(50% - 100px); */
+    left: 65%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+}
+
+@keyframes autoRun {
+    0% {
+        transform: perspective(1000px) rotateX(-14deg) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(-14deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
+        translateZ(220px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Shadow  */
+
+.sbanner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* overflow: hidden; */
+    position: relative;
+    rotate: -10deg;
+}
+
+.sbanner .sslider {
+    position: absolute;
+    width: 160px;
+    height: 85px;
+    top: 65%;
+    /* left: calc(50% - 100px); */
+    left: -20%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: sautoRun 20s linear infinite;
+}
+
+@keyframes sautoRun {
+    0% {
+        transform: perspective(1000px) rotateX(-14deg) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(-14deg) rotateY(360deg);
+    }
+}
+
+.sbanner .sslider .sitem {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc((var(--sposition) - 1) * (360 / var(--squantity)) * 1deg)) 
+        translateZ(220px);
+}
+
+.sbanner .sslider .sitem .shadowf {
+    width: 60%;
+    height: 40px;
+    background-color: aqua;
+    box-shadow: 0 0 10px 4px rgb(139, 255, 255);
+    filter: blur(20px);
+    /* object-fit: cover; */
+    transform: rotateX(86deg);
+    /* box-shadow: 6px 2px 8px rgba(255, 255, 255, 0.348),-6px -2px 8px rgba(0, 0, 0, 0.348),-2px 4px 8px rgba(0, 0, 0, 0.348),2px -4px 8px rgba(0, 0, 0, 0.348); */
+}

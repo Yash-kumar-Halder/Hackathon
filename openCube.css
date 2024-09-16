@@ -1,0 +1,149 @@
+.ob_cont {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    top: 45vh;
+    left: 35vw;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+
+.obShadow {
+    position: absolute;
+    top: 470px;
+    left: 90px;
+    width: 200px;
+    height: 130px;
+    filter: blur(80px);
+    background-color: cyan;
+    transform: rotateX(90deg);
+}
+
+.oBox {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    /* transform: rotate(-90deg); */
+    transform-style: preserve-3d;
+    /* transform: rotateY(30deg); */
+    animation: animate 10s infinite;
+}
+
+.oBox div {
+    transition: 0.9S;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+
+    25% {
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+
+    50% {
+        transform: rotateX(45deg) rotateY(45deg);
+    }
+
+    75% {
+        transform: rotateX(-45deg) rotateY(45deg);
+    }
+
+    100% {
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+}
+
+.hovering:hover~.oBox #ob_front {
+    transform: translateZ(-150px) rotateY(360deg);
+}
+
+.hovering:hover~.oBox #ob_back {
+    transform: translateZ(150px) rotateY(360deg);
+}
+
+.hovering:hover~.oBox #ob_left {
+    right: 150px;
+    transform: rotateY(270deg);
+}
+
+.hovering:hover~.oBox #ob_right {
+    left: 150px;
+    transform: rotateY(270deg)
+}
+
+.hovering:hover~.oBox #ob_top {
+    bottom: 150px;
+    transform: rotateX(270deg);
+}
+
+.hovering:hover~.oBox #ob_bottom {
+    top: 150px;
+    transform: rotateX(270deg);
+}
+
+
+
+
+.obCart {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    padding: 100px 0px;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    font-size: 32px;
+    position: absolute;
+}
+
+.obCart img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    top: -100px;
+}
+
+#ob_left {
+    right: 100px;
+    transform: rotateY(-90deg);
+}
+
+#ob_right {
+    left: 100px;
+    transform: rotateY(90deg);
+}
+
+#ob_top {
+    bottom: 100px;
+    transform: rotateX(90deg);
+}
+
+#ob_bottom {
+    top: 100px;
+    transform: rotateX(-90deg);
+}
+
+#ob_front {
+    transform: translateZ(100px);
+}
+
+#ob_back {
+    transform: translateZ(-100px);
+}
+
+.hovering {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    font-size: 22px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    top: 0px;
+    left: 0px;
+}

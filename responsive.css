@@ -1,0 +1,260 @@
+@media only screen and (max-width:414px) {
+    .navigation {
+        width: 100%;
+        height: 35px;
+    }
+
+    .wraper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .home {
+        height: 91vh;
+        overflow: hidden;
+    }
+
+    .homePartical {
+        position: absolute;
+        top: -160px;
+        left: -50vw;
+        rotate: 45deg;
+        width: 400px;
+        height: 150vh;
+        background-color: #595959;
+        opacity: 0.5;
+    }
+    
+    .homePartical2 {
+        position: absolute;
+        top: -180px;
+        left: -70vw;
+        rotate: 45deg;
+        width: 10px;
+        height: 150vh;
+        background-color: #797979;
+        opacity: 0.5;
+    }
+
+    .hero {
+        height: 80vh;
+        flex-direction: column;
+    }
+
+    .heroLeft,
+    .heroRight {
+        width: 100%;
+    }
+
+    .heroLeft {
+        padding-top: 15vh;
+    }
+
+    .heading,
+    .heading span {
+        font-size: 12.5vw;
+        line-height: 10vw;
+    }
+
+    .exploreContent {
+        opacity: 0.6;
+        font-weight: 300;
+        letter-spacing: -0.5px;
+        line-height: 14px;
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .explore {
+        margin-top: 12px;
+    }
+
+    .banner .slider .item {
+        position: absolute;
+        inset: 0 0 0 0;
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(160px);
+    }
+
+    .banner .slider {
+        position: absolute;
+        width: 130px;
+        height: 85px;
+        top: 25%;
+        /* left: calc(50% - 100px); */
+        left: 70%;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        animation: autoRun 20s linear infinite;
+    }
+
+    .sbanner .sslider {
+        top: 150px;
+        left: -90px;
+    }
+
+    .sbanner .sslider .sitem {
+        position: absolute;
+        inset: 0 0 0 0;
+        transform:
+            rotateY(calc((var(--sposition) - 1) * (360 / var(--squantity)) * 1deg)) translateZ(100px);
+    }
+
+    .sbanner .sslider .sitem .shadowf {
+        width: 5%;
+    }
+
+    .page2 {
+        align-items: center;
+        justify-content: start;
+        height: 48vh;
+        flex-direction: column;
+    }
+
+    .p2Heading {
+        margin-top: 2vh;
+        margin-bottom: 3vh;
+        font-size: 3.2rem;
+        font-family: monospace;
+    }
+
+    .p2Cont {
+        height: 25vh;
+        width: 80%;
+    }
+
+    .page3 {
+        flex-direction: column;
+    }
+
+    .p3Wraper {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .p3Left {
+        width: 100%;
+        height: 100vh;
+    }
+    .member {
+        font-size: 8vw;
+    }
+
+    .p3Right {
+        width: 100%;
+    }
+
+    .ob_cont {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        top: 20vh;
+        left: 55vw;
+        transform: translate(-50%, -50%);
+        perspective: 1000px;
+    }
+    .oBox {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        /* transform: rotate(-90deg); */
+        transform-style: preserve-3d;
+        /* transform: rotateY(30deg); */
+        animation: animate 10s infinite;
+    }
+    
+    .oBox div {
+        transition: 0.9S;
+    }
+    
+    @keyframes animate {
+        0% {
+            transform: rotateX(45deg) rotateY(-45deg);
+        }
+        25% {
+            transform: rotateX(-45deg) rotateY(-45deg);
+        }
+        50% {
+            transform: rotateX(45deg) rotateY(45deg);
+        }
+        75% {
+            transform: rotateX(-45deg) rotateY(45deg);
+        }
+        100% {
+            transform: rotateX(45deg) rotateY(-45deg);
+        }
+    }
+    
+    .hovering:hover~ .oBox #ob_front {
+        transform: translateZ(-110px) rotateY(360deg);
+    }
+    .hovering:hover~ .oBox #ob_back {
+        transform: translateZ(110px) rotateY(360deg);
+    }
+    .hovering:hover~ .oBox #ob_left {
+        right: 110px;
+        transform:rotateY(270deg);
+    }
+    .hovering:hover~ .oBox #ob_right {
+        left: 110px;
+        transform:rotateY(270deg)
+    }
+    .hovering:hover~ .oBox #ob_top {
+        bottom: 110px;
+        transform: rotateX(270deg);
+    }
+    .hovering:hover~ .oBox #ob_bottom {
+        top: 110px;
+        transform: rotateX(270deg);
+    }
+    
+    
+    
+    
+    .obCart {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        padding: 0px 0px;
+        color: white;
+        background-color: black;
+        border: 2px solid white;
+        font-size: 32px;
+        position: absolute;
+    }
+    
+    .obCart img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        position: relative;
+        top: 0px;
+    }
+    
+    #ob_left {
+        right: 75px;
+        transform: rotateY(-90deg);
+    }
+    #ob_right {
+        left: 75px;
+        transform: rotateY(90deg);
+    }
+    #ob_top {
+        bottom: 75px;
+        transform: rotateX(90deg);
+    }
+    #ob_bottom {
+        top: 75px;
+        transform: rotateX(-90deg);
+    }
+    #ob_front {
+        transform: translateZ(75px);
+    }
+    #ob_back {
+        transform: translateZ(-75px);
+    }
+}
